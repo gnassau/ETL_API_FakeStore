@@ -16,7 +16,7 @@ from src.loading.postgres_loader import load_products
 @dag(
     dag_id="products_pipeline_v2",
     start_date=datetime(2024, 1, 1),
-    schedule="* * * * *",
+    schedule="0 * * * *",
     catchup=False,
     tags=["bronze", "silver", "gold"],
     params={

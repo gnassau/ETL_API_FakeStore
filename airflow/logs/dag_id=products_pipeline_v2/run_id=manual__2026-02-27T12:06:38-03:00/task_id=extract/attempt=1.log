@@ -1,0 +1,17 @@
+[2026-02-27T15:06:43.735+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: products_pipeline_v2.extract manual__2026-02-27T12:06:38-03:00 [queued]>
+[2026-02-27T15:06:43.745+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: products_pipeline_v2.extract manual__2026-02-27T12:06:38-03:00 [queued]>
+[2026-02-27T15:06:43.745+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-02-27T15:06:43.760+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2026-02-27 15:06:38+00:00
+[2026-02-27T15:06:43.765+0000] {standard_task_runner.py:60} INFO - Started process 776 to run task
+[2026-02-27T15:06:43.771+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'products_pipeline_v2', 'extract', 'manual__2026-02-27T12:06:38-03:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline_V2.py', '--cfg-path', '/tmp/tmpm30_l7pj']
+[2026-02-27T15:06:43.774+0000] {standard_task_runner.py:88} INFO - Job 184: Subtask extract
+[2026-02-27T15:06:43.845+0000] {task_command.py:423} INFO - Running <TaskInstance: products_pipeline_v2.extract manual__2026-02-27T12:06:38-03:00 [running]> on host 15dda9124bbc
+[2026-02-27T15:06:43.994+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='products_pipeline_v2' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-02-27T15:06:38+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-27T12:06:38-03:00'
+[2026-02-27T15:06:43.997+0000] {logging_mixin.py:188} INFO - 🔄 RANGE 14 - 15
+[2026-02-27T15:06:44.518+0000] {logging_mixin.py:188} INFO - ✅ Produto 14 processado
+[2026-02-27T15:06:44.877+0000] {logging_mixin.py:188} INFO - ✅ Produto 15 processado
+[2026-02-27T15:06:44.878+0000] {logging_mixin.py:188} INFO - SALVANDO EM: /opt/project/data/bronze/products/products.json
+[2026-02-27T15:06:44.880+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-02-27T15:06:44.890+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=products_pipeline_v2, task_id=extract, execution_date=20260227T150638, start_date=20260227T150643, end_date=20260227T150644
+[2026-02-27T15:06:44.927+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-27T15:06:44.953+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
