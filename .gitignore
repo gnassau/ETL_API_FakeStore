@@ -1,0 +1,6 @@
+.env
+*.parquet
+.env
+*.parquet
+*.json
+__pycache__

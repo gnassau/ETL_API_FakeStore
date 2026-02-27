@@ -1,0 +1,14 @@
+[2026-02-26T22:32:16.998+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: products_pipeline.transform manual__2026-02-26T22:32:13.658332+00:00 [queued]>
+[2026-02-26T22:32:17.014+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: products_pipeline.transform manual__2026-02-26T22:32:13.658332+00:00 [queued]>
+[2026-02-26T22:32:17.014+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-02-26T22:32:17.035+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2026-02-26 22:32:13.658332+00:00
+[2026-02-26T22:32:17.041+0000] {standard_task_runner.py:60} INFO - Started process 198 to run task
+[2026-02-26T22:32:17.045+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'products_pipeline', 'transform', 'manual__2026-02-26T22:32:13.658332+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline.py', '--cfg-path', '/tmp/tmptq24fa22']
+[2026-02-26T22:32:17.048+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask transform
+[2026-02-26T22:32:17.109+0000] {task_command.py:423} INFO - Running <TaskInstance: products_pipeline.transform manual__2026-02-26T22:32:13.658332+00:00 [running]> on host 1953bb0ad289
+[2026-02-26T22:32:17.205+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='products_pipeline' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2026-02-26T22:32:13.658332+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-26T22:32:13.658332+00:00'
+[2026-02-26T22:32:17.219+0000] {logging_mixin.py:188} INFO - ✅ Transformação de dados concluída com sucesso!
+[2026-02-26T22:32:17.220+0000] {python.py:201} INFO - Done. Returned value was: {"id":{"0":1},"title":{"0":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"},"price":{"0":109.95},"description":{"0":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"},"category":{"0":"Men's Clothing"},"image":{"0":"https:\/\/fakestoreapi.com\/img\/81fPKd-2AYL._AC_SL1500_t.png"},"price_category":{"0":"Medium"},"rating_rate":{"0":3.9},"rating_count":{"0":120}}
+[2026-02-26T22:32:17.242+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=products_pipeline, task_id=transform, execution_date=20260226T223213, start_date=20260226T223216, end_date=20260226T223217
+[2026-02-26T22:32:17.262+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-26T22:32:17.286+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

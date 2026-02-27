@@ -1,0 +1,35 @@
+[2026-02-26T23:35:32.009+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: products_pipeline_v2.extract manual__2026-02-26T20:35:23-03:00 [queued]>
+[2026-02-26T23:35:32.019+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: products_pipeline_v2.extract manual__2026-02-26T20:35:23-03:00 [queued]>
+[2026-02-26T23:35:32.019+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-02-26T23:35:32.036+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2026-02-26 23:35:23+00:00
+[2026-02-26T23:35:32.042+0000] {standard_task_runner.py:60} INFO - Started process 1112 to run task
+[2026-02-26T23:35:32.047+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'products_pipeline_v2', 'extract', 'manual__2026-02-26T20:35:23-03:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline_V2.py', '--cfg-path', '/tmp/tmpkxstrsb6']
+[2026-02-26T23:35:32.051+0000] {standard_task_runner.py:88} INFO - Job 67: Subtask extract
+[2026-02-26T23:35:32.121+0000] {task_command.py:423} INFO - Running <TaskInstance: products_pipeline_v2.extract manual__2026-02-26T20:35:23-03:00 [running]> on host 96ad1ca8d15d
+[2026-02-26T23:35:32.208+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='products_pipeline_v2' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-02-26T23:35:23+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-26T20:35:23-03:00'
+[2026-02-26T23:35:32.211+0000] {logging_mixin.py:188} INFO - 🔄 FULL REFRESH
+[2026-02-26T23:35:33.192+0000] {logging_mixin.py:188} INFO - ✅ Produto 1 processado
+[2026-02-26T23:35:33.595+0000] {logging_mixin.py:188} INFO - ✅ Produto 2 processado
+[2026-02-26T23:35:34.000+0000] {logging_mixin.py:188} INFO - ✅ Produto 3 processado
+[2026-02-26T23:35:34.413+0000] {logging_mixin.py:188} INFO - ✅ Produto 4 processado
+[2026-02-26T23:35:34.790+0000] {logging_mixin.py:188} INFO - ✅ Produto 5 processado
+[2026-02-26T23:35:35.185+0000] {logging_mixin.py:188} INFO - ✅ Produto 6 processado
+[2026-02-26T23:35:35.551+0000] {logging_mixin.py:188} INFO - ✅ Produto 7 processado
+[2026-02-26T23:35:35.929+0000] {logging_mixin.py:188} INFO - ✅ Produto 8 processado
+[2026-02-26T23:35:36.291+0000] {logging_mixin.py:188} INFO - ✅ Produto 9 processado
+[2026-02-26T23:35:36.647+0000] {logging_mixin.py:188} INFO - ✅ Produto 10 processado
+[2026-02-26T23:35:37.002+0000] {logging_mixin.py:188} INFO - ✅ Produto 11 processado
+[2026-02-26T23:35:37.441+0000] {logging_mixin.py:188} INFO - ✅ Produto 12 processado
+[2026-02-26T23:35:37.799+0000] {logging_mixin.py:188} INFO - ✅ Produto 13 processado
+[2026-02-26T23:35:38.159+0000] {logging_mixin.py:188} INFO - ✅ Produto 14 processado
+[2026-02-26T23:35:38.534+0000] {logging_mixin.py:188} INFO - ✅ Produto 15 processado
+[2026-02-26T23:35:38.935+0000] {logging_mixin.py:188} INFO - ✅ Produto 16 processado
+[2026-02-26T23:35:39.346+0000] {logging_mixin.py:188} INFO - ✅ Produto 17 processado
+[2026-02-26T23:35:39.699+0000] {logging_mixin.py:188} INFO - ✅ Produto 18 processado
+[2026-02-26T23:35:40.068+0000] {logging_mixin.py:188} INFO - ✅ Produto 19 processado
+[2026-02-26T23:35:40.435+0000] {logging_mixin.py:188} INFO - ✅ Produto 20 processado
+[2026-02-26T23:35:40.438+0000] {logging_mixin.py:188} INFO - SALVANDO EM: /opt/project/data/bronze/products/products.json
+[2026-02-26T23:35:40.439+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-02-26T23:35:40.451+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=products_pipeline_v2, task_id=extract, execution_date=20260226T233523, start_date=20260226T233532, end_date=20260226T233540
+[2026-02-26T23:35:40.484+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-26T23:35:40.512+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
