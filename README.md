@@ -110,7 +110,7 @@ A função `extract_products()` suporta três modos de execução:
 
 ---
 
-### 🥉 1️⃣ Full Load (`mode="full"`)
+### 1️⃣ Full Load (`mode="full"`)
 
 Realiza uma carga completa dos dados disponíveis na API.
 
