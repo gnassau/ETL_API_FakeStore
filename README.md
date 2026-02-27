@@ -8,11 +8,14 @@ Projeto de engenharia de dados utilizando a API Fakestore para fins educacionais
 data-engineering-fakestore/
 ├── README.md
 ├── src/
+    ├──ingestion
+    ├──loading
+    ├──transformation_silver
+    ├──transformation_gold
 ├── data/
     ├──bronze
     ├──silver
     ├──gold
-└── docs/
 ```
 
 ## Funcionalidades
