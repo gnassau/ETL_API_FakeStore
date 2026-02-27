@@ -1,49 +1,97 @@
-# Data Engineering Fakestore
+## Arquitetura Medallion
 
-## Sobre o Projeto
-Projeto de engenharia de dados utilizando a API Fakestore para fins educacionais e de demonstração.
+### 🥉 Bronze Layer
+- Consome dados brutos da API FakeStore
+- Armazena dados em formato bruto dentro do container Docker
+- Mantém fidelidade total à fonte original
 
-## Estrutura
+### 🥈 Silver Layer
+- Limpeza e padronização dos dados
+- Normalização de estruturas
+- Persistência em PostgreSQL
+
+### 🥇 Gold Layer
+🚧 Ainda não implementada  
+
+Planejada para conter:
+- Agregações analíticas
+- Métricas de negócio
+- Tabelas otimizadas para BI
+
+
+## 🛠 Tecnologias Utilizadas
+
+- **Python** (Requests, Pandas, SQLAlchemy)
+- **PostgreSQL**
+- **Apache Airflow**
+- **Docker & Docker Compose**
+- **Arquitetura Medallion (Bronze/Silver/Gold)**
+
+
+## 📂 Estrutura do Projeto
 ```
 data-engineering-fakestore/
 ├── README.md
+├── requirements.txt
 ├── src/
-    ├──ingestion
-    ├──loading
-    ├──transformation_silver
-    ├──transformation_gold
+│ ├── ingestion/
+│ ├── loading/
+│ ├── transformation_silver/
+│ └── transformation_gold/ (planejado)
 ├── data/
-    ├──bronze
-    ├──silver
-    ├──gold
+│ ├── bronze/
+│ ├── silver/
+│ └── gold/
+├── airflow/
+│ ├── dags/
+│ ├── docker-compose.yml
 ```
+## 🐳 Executando o Projeto
 
-## Funcionalidades
-- Coleta de dados da API Fakestore
-- Processamento e transformação de dados
-- Armazenamento em formato estruturado
+O `docker-compose.yml` está localizado dentro da pasta `airflow/`.
 
-## Requisitos
-- Python 3.8+
-- Bibliotecas: requests, pandas, numpy
+### Subir ambiente:
 
-## Instalação
 ```bash
-pip install -r requirements.txt
+cd airflow
+docker compose up --build
 ```
 
-## Uso
-```bash
-python src/main.py
+## 🔐 Variáveis de Ambiente
+Criar arquivo .env na raiz do projeto com:
+```
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+POSTGRES_HOST=
+POSTGRES_PORT=
 ```
 
-## Dados
-- Produtos
-- Usuários
-- Categorias
+## 🚀 Pipeline de Dados
+O pipeline realiza:
 
-## Contribuição
-Contribuições são bem-vindas.
+* Extração de dados da API FakeStore
+* Armazenamento bruto (Bronze)
+* Transformação e limpeza (Silver)
+* Carga estruturada no PostgreSQL
+* Orquestração via Airflow
 
-## Licença
-MIT
+## 📌 Roadmap / Melhorias Futuras
+
+- [ ] Implementar camada Gold
+- [ ] Criar agregações analíticas
+- [ ] Adicionar testes automatizados
+- [ ] Implementar logging estruturado
+- [ ] Deploy em cloud (AWS/GCP)
+- [ ] Implementar CI/CD
+
+## 🎯 Objetivo do Projeto
+
+Demonstrar conhecimento em:
+
+- Arquitetura de pipelines de dados
+- Organização em camadas (Medallion Architecture)
+- Orquestração com Airflow
+- Persistência em banco relacional
+- Boas práticas de versionamento
+- Estruturação de projeto para produção
