@@ -9,6 +9,9 @@ data-engineering-fakestore/
 ├── README.md
 ├── src/
 ├── data/
+    ├──bronze
+    ├──silver
+    ├──gold
 └── docs/
 ```
 
